@@ -1,0 +1,10 @@
+<mvc:View xmlns="sap.m" 
+        xmlns:mvc="sap.ui.core.mvc" 
+        controllerName="logaligroup.SAPUI5.controller.App">
+    <Text text="Hello World en vista"/>
+    <Button text="{i18n>showHelloButtonText}" press=".onShowHello"/>
+    <Input value="{/recipient/name}" 
+            description="Hello {/recipient/name}" 
+            width="60%" 
+            valueLiveUpdate="true"></Input>
+</mvc:View>
