@@ -1,10 +1,24 @@
 <mvc:View xmlns="sap.m" 
         xmlns:mvc="sap.ui.core.mvc" 
-        controllerName="logaligroup.SAPUI5.controller.App">
-    <Text text="Hello World en vista"/>
-    <Button text="{i18n>showHelloButtonText}" press=".onShowHello"/>
-    <Input value="{/recipient/name}" 
-            description="Hello {/recipient/name}" 
-            width="60%" 
-            valueLiveUpdate="true"></Input>
+        controllerName="logaligroup.SAPUI5.controller.App"
+        displayBlock="true">
+    <Shell>
+        <App>
+            <pages>
+                <Page title="{i18n>appTitle}">
+                    <content>
+                        <Panel headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto">
+                            <content>
+                                <Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd"/>
+                                <Input value="{/recipient/name}" 
+                                        width="60%" 
+                                        valueLiveUpdate="true"/>
+                                <Text text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements"/>
+                            </content>        
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>        
+        </App>   
+    </Shell>            
 </mvc:View>
